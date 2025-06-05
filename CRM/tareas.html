@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRM - Tareas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="estilo-body">
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="p-6">
+        <img src="assets/img.png" alt="Logo" class="Logo">
+      </div>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="index.html" class="link">Dashboard</a></li>
+          <li><a href="clientes.html" class="link">Clientes</a></li>
+          <li><a href="tareas.html" class="link-activo">Tareas</a></li>
+          <li><a href="ventas.html" class="link">Ventas</a></li>
+          <li><a href="reportes.html" class="link">Reportes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="titulo-pagina">Tareas</h1>
+        <button class="boton-primario">+ Nueva tarea</button>
+      </div>
+
+      <div class="tarjeta tabla-contenedor">
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>Descripción</th>
+              <th>Responsable</th>
+              <th>Fecha límite</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Llamar a nuevos clientes</td>
+              <td>Andrea González</td>
+              <td>2025-06-10</td>
+              <td><span class="estado-pendiente">Pendiente</span></td>
+            </tr>
+            <tr>
+              <td>Enviar cotización</td>
+              <td>Marco Rojas</td>
+              <td>2025-06-08</td>
+              <td><span class="estado-enprogreso">En progreso</span></td>
+            </tr>
+            <tr>
+              <td>Reunión con cliente</td>
+              <td>Sofía Vargas</td>
+              <td>2025-06-05</td>
+              <td><span class="estado-completada">Completada</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

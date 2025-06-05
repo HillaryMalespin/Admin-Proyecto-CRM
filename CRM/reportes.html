@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRM - Reportes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="estilo-body">
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="p-6">
+        <img src="assets/img.png" alt="Logo" class="Logo">
+      </div>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="index.html" class="link">Dashboard</a></li>
+          <li><a href="clientes.html" class="link">Clientes</a></li>
+          <li><a href="tareas.html" class="link">Tareas</a></li>
+          <li><a href="ventas.html" class="link">Ventas</a></li>
+          <li><a href="reportes.html" class="link-activo">Reportes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+      <h1 class="titulo-pagina mb-6">Reportes</h1>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Gráfico de barras -->
+        <div class="tarjeta">
+          <h3 class="subtitulo">Ventas por mes</h3>
+          <canvas id="ventasMensuales"></canvas>
+        </div>
+
+        <!-- Gráfico de dona -->
+        <div class="tarjeta">
+          <h3 class="subtitulo">Estado de tareas</h3>
+          <canvas id="estadoTareas"></canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ventasCtx = document.getElementById('ventasMensuales');
+    new Chart(ventasCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Ventas ($)',
+          data: [1200, 1800, 2500, 2200, 2000, 2700],
+          backgroundColor: '#3B82F6'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+
+    const tareasCtx = document.getElementById('estadoTareas');
+    new Chart(tareasCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Pendientes', 'En progreso', 'Completadas'],
+        datasets: [{
+          data: [6, 4, 10],
+          backgroundColor: ['#FACC15', '#3B82F6', '#10B981']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

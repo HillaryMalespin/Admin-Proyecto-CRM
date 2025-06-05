@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRM - Ventas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="estilo-body">
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+     <div class="p-6">
+        <img src="assets/img.png" alt="Logo" class="Logo">
+      </div>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="index.html" class="link">Dashboard</a></li>
+          <li><a href="clientes.html" class="link">Clientes</a></li>
+          <li><a href="tareas.html" class="link">Tareas</a></li>
+          <li><a href="ventas.html" class="link-activo">Ventas</a></li>
+          <li><a href="reportes.html" class="link">Reportes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="titulo-pagina">Ventas</h1>
+        <button class="boton-primario">+ Registrar venta</button>
+      </div>
+
+      <div class="tarjeta tabla-contenedor">
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Producto/Servicio</th>
+              <th>Monto</th>
+              <th>Fecha cierre</th>
+              <th>Etapa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Andrea González</td>
+              <td>Plan Premium</td>
+              <td>$1,200</td>
+              <td>2025-06-15</td>
+              <td><span class="etapa-negociacion">Negociación</span></td>
+            </tr>
+            <tr>
+              <td>Marco Rojas</td>
+              <td>Consultoría mensual</td>
+              <td>$800</td>
+              <td>2025-06-12</td>
+              <td><span class="etapa-propuesta">Propuesta</span></td>
+            </tr>
+            <tr>
+              <td>Sofía Vargas</td>
+              <td>Soporte anual</td>
+              <td>$2,500</td>
+              <td>2025-06-05</td>
+              <td><span class="etapa-cerrado">Cerrado</span></td>
+            </tr>
+            <tr>
+              <td>Pedro Muñoz</td>
+              <td>Capacitación</td>
+              <td>$600</td>
+              <td>2025-06-09</td>
+              <td><span class="etapa-perdido">Perdido</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

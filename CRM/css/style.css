@@ -171,3 +171,67 @@ img {
   border-radius: 0.5rem;
   display: inline-block;
 }
+
+
+.estado-pendiente {
+  background-color: #FEF3C7;
+  color: #D97706;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.estado-enprogreso {
+  background-color: #DBEAFE;
+  color: #2563EB;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.estado-completada {
+  background-color: #D1FAE5;
+  color: #059669;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.etapa-negociacion {
+  background-color: #FEF3C7;
+  color: #D97706;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.etapa-propuesta {
+  background-color: #DBEAFE;
+  color: #2563EB;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.etapa-cerrado {
+  background-color: #D1FAE5;
+  color: #059669;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.etapa-perdido {
+  background-color: #FEE2E2;
+  color: #DC2626;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
