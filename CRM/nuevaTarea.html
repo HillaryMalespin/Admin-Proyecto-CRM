@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRM - Nueva Tarea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="estilo-body">
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="titulo-sidebar">
+        <img src="assets/img.png" alt="Logo" class="Logo">
+      </div>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="index.html" class="link">Dashboard</a></li>
+          <li><a href="clientes.html" class="link">Clientes</a></li>
+          <li><a href="tareas.html" class="link-activo">Tareas</a></li>
+          <li><a href="ventas.html" class="link">Ventas</a></li>
+          <li><a href="reportes.html" class="link">Reportes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal max-w-2xl mx-auto">
+      <h1 class="titulo-pagina mb-6">Nueva tarea</h1>
+
+      <div class="tarjeta tarjeta-formulario">
+        <form>
+          <div class="grid grid-cols-1 gap-4">
+            <div>
+              <label class="label-form">Descripción</label>
+              <input type="text" class="input-form" placeholder="Ej: Llamar al cliente Andrea">
+            </div>
+
+            <div>
+              <label class="label-form">Responsable</label>
+              <input type="text" class="input-form" placeholder="Ej: Sofía Vargas">
+            </div>
+
+            <div>
+              <label class="label-form">Fecha límite</label>
+              <input type="date" class="input-form">
+            </div>
+
+            <div>
+              <label class="label-form">Prioridad</label>
+              <select class="input-form">
+                <option>Alta</option>
+                <option>Media</option>
+                <option>Baja</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="label-form">Estado</label>
+              <select class="input-form">
+                <option>Pendiente</option>
+                <option>En progreso</option>
+                <option>Completada</option>
+              </select>
+            </div>
+
+            <div class="flex justify-end gap-4 mt-6">
+              <a href="tareas.html" class="boton-secundario">Cancelar</a>
+              <button type="submit" class="boton-primario">Guardar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

@@ -30,7 +30,7 @@
     <main class="contenido-principal">
       <div class="flex items-center justify-between mb-6">
         <h1 class="titulo-pagina">Clientes</h1>
-        <button class="boton-primario">+ Agregar cliente</button>
+        <a href="agregarCliente.html" class="boton-primario">+ Agregar cliente</a>
       </div>
 
       <div class="tarjeta tabla-contenedor">
@@ -46,21 +46,30 @@
           </thead>
           <tbody>
             <tr>
-              <td>Andrea González</td>
-              <td>andrea@empresa.com</td>
-              <td>8888-1111</td>
-              <td>Empresa A</td>
-              <td><span class="estado-activo">Activo</span></td>
-            </tr>
+                <td class="cliente-info">
+                    <img src="assets/andrea-cliente.jpg" alt="Andrea" class="foto-cliente">
+                    Andrea González
+                </td>
+                <td>andrea@empresa.com</td>
+                <td>8888-1111</td>
+                <td>Empresa A</td>
+                <td><span class="estado-activo">Activo</span></td>
+                </tr>
             <tr>
-              <td>Marco Rojas</td>
+              <td class="cliente-info">
+                    <img src="assets/marco-cliente.jpg" alt="Marco" class="foto-cliente">
+                    Marco Rojas
+                </td>
               <td>marco@empresa.com</td>
               <td>8999-2222</td>
               <td>Empresa B</td>
               <td><span class="estado-inactivo">Inactivo</span></td>
             </tr>
             <tr>
-              <td>Sofía Vargas</td>
+              <td class="cliente-info">
+                    <img src="assets/sofia-cliente.jpg" alt="Sofia" class="foto-cliente">
+                    Sofia Vargas
+                </td>
               <td>sofia@empresa.com</td>
               <td>8777-3333</td>
               <td>Empresa C</td>

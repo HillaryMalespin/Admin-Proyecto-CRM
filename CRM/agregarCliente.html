@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRM - Agregar Cliente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="estilo-body">
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="titulo-sidebar">
+        <img src="assets/img.png" alt="Logo" class="Logo">
+      </div>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="index.html" class="link">Dashboard</a></li>
+          <li><a href="clientes.html" class="link-activo">Clientes</a></li>
+          <li><a href="tareas.html" class="link">Tareas</a></li>
+          <li><a href="ventas.html" class="link">Ventas</a></li>
+          <li><a href="reportes.html" class="link">Reportes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal max-w-2xl mx-auto">
+      <h1 class="titulo-pagina mb-6">Agregar cliente</h1>
+
+      <div class="tarjeta tarjeta-formulario">
+        <form>
+            <div class="grid grid-cols-1 gap-4">
+            <div>
+                <label class="label-form">Nombre completo</label>
+                <input type="text" class="input-form" placeholder="Ej: Andrea González">
+            </div>
+
+            <div>
+                <label class="label-form">Email</label>
+                <input type="email" class="input-form" placeholder="Ej: andrea@empresa.com">
+            </div>
+
+            <div>
+                <label class="label-form">Teléfono</label>
+                <input type="text" class="input-form" placeholder="Ej: 8888-1111">
+            </div>
+
+            <div>
+                <label class="label-form">Empresa</label>
+                <input type="text" class="input-form" placeholder="Ej: Empresa A">
+            </div>
+
+            <div>
+                <label class="label-form">Estado</label>
+                <select class="input-form">
+                <option>Activo</option>
+                <option>Inactivo</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="label-form">Foto de perfil</label>
+                <input type="file" class="input-form archivo">
+            </div>
+
+            <div class="flex justify-end gap-4 mt-6">
+                <a href="clientes.html" class="boton-secundario">Cancelar</a>
+                <button type="submit" class="boton-primario">Guardar</button>
+            </div>
+            </div>
+        </form>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
