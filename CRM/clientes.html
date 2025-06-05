@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRM - Clientes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="estilo-body">
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="titulo-sidebar">Mi CRM</div>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="index.html" class="link">Dashboard</a></li>
+          <li><a href="clientes.html" class="link-activo">Clientes</a></li>
+          <li><a href="tareas.html" class="link">Tareas</a></li>
+          <li><a href="ventas.html" class="link">Ventas</a></li>
+          <li><a href="reportes.html" class="link">Reportes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="titulo-pagina">Clientes</h1>
+        <button class="boton-primario">+ Agregar cliente</button>
+      </div>
+
+      <div class="tarjeta tabla-contenedor">
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th>Empresa</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Andrea González</td>
+              <td>andrea@empresa.com</td>
+              <td>8888-1111</td>
+              <td>Empresa A</td>
+              <td><span class="estado-activo">Activo</span></td>
+            </tr>
+            <tr>
+              <td>Marco Rojas</td>
+              <td>marco@empresa.com</td>
+              <td>8999-2222</td>
+              <td>Empresa B</td>
+              <td><span class="estado-inactivo">Inactivo</span></td>
+            </tr>
+            <tr>
+              <td>Sofía Vargas</td>
+              <td>sofia@empresa.com</td>
+              <td>8777-3333</td>
+              <td>Empresa C</td>
+              <td><span class="estado-activo">Activo</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

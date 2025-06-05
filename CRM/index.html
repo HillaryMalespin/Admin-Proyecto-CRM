@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRM - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="estilo-body">
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="titulo-sidebar">Mi CRM</div>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="index.html" class="link-activo">Dashboard</a></li>
+          <li><a href="clientes.html" class="link">Clientes</a></li>
+          <li><a href="tareas.html" class="link">Tareas</a></li>
+          <li><a href="ventas.html" class="link">Ventas</a></li>
+          <li><a href="reportes.html" class="link">Reportes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+      <h1 class="titulo-pagina">Panel de control</h1>
+
+      <!-- Tarjetas de métricas -->
+      <div class="grid-metricas">
+        <div class="tarjeta">
+          <p class="descripcion">Clientes totales</p>
+          <h2 class="valor azul">1,200</h2>
+        </div>
+        <div class="tarjeta">
+          <p class="descripcion">Oportunidades abiertas</p>
+          <h2 class="valor verde">320</h2>
+        </div>
+        <div class="tarjeta">
+          <p class="descripcion">Tareas pendientes</p>
+          <h2 class="valor amarillo">18</h2>
+        </div>
+      </div>
+
+      <!-- Gráfico de ventas -->
+      <div class="tarjeta">
+        <h3 class="subtitulo">Gráfico de ventas</h3>
+        <canvas id="graficoVentas" height="150"></canvas>
+      </div>
+    </main>
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('graficoVentas');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Ventas ($)',
+          data: [1200, 1900, 3000, 2500, 2200, 2700],
+          backgroundColor: '#93C5FD',
+          borderColor: '#3B82F6',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
